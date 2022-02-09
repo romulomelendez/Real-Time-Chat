@@ -1,10 +1,20 @@
 import React from 'react'
 
+import { Select } from '../../components/Select'
+import { UserName } from '../../components/UserName'
+import { Button } from '../../components/Button'
+
 export const Home: React.FC = () => {
 
     return (
 
-        <h1>Home Page</h1>
+        <>
+
+            <Select />
+            <UserName />
+            <Button />
+        
+        </>
 
     )
 
