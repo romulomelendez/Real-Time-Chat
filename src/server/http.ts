@@ -10,4 +10,4 @@ const io = new Server(httpServer)
 
 app.use()
 
-app.listen(3000, () => console.log('App running on port 3000'))
+export { httpServer, io }
