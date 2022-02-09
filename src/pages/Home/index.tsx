@@ -12,9 +12,13 @@ export const Home: React.FC = () => {
 
         <Container>
 
-            <Select />
-            <UserName />
-            <Button />
+            <form action="/chat">
+
+                <Select />
+                <UserName />
+                <Button />
+
+            </form>
         
         </Container>
 
