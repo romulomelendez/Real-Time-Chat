@@ -4,7 +4,7 @@ import { Message } from '../../components/Message'
 
 import { Container, MessageArea, InputMessage } from './style'
 
-export const Chat = () => {
+export const Chat: React.FC = () => {
 
     return (
 
