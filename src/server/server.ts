@@ -1,3 +1,6 @@
 import { httpServer } from './http'
 
-httpServer.listen(3000, () => console.log('App running on port 3000'))
+const HOST = 'localhost'
+const PORT = process.env.PORT || 3001
+
+httpServer.listen(PORT, () => console.log(`App's running on ${HOST}:${PORT}`))
