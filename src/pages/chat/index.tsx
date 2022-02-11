@@ -1,12 +1,28 @@
 import React from 'react'
 
-//import {} from './style'
+import { Message } from '../../components/Message'
+
+import { Container, MessageArea, InputMessage } from './style'
 
 export const Chat = () => {
 
     return (
 
-        <h1>Chat Page</h1>
+        <Container>
+
+            <MessageArea>
+
+                {
+
+                    <Message />
+
+                }
+
+            </MessageArea>
+
+            <InputMessage />
+
+        </Container>
 
     )
 
