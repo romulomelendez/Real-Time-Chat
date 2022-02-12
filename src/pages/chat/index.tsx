@@ -23,8 +23,19 @@ export const Chat: React.FC = () => {
     useEffect(() => {
 
         const socket = io('http://localhost:3001')
-           
-    }, [])
+        socket.on('connection', socket => {
+            
+            console.log('Connectou', socket.id)
+            socket.on('msg', (data: string) => {
+
+                console.log(data)
+                socket.emit('msg', 'mandando do Front')
+
+            }) 
+            
+        })
+        
+    }, [message])
 
     return (
 
