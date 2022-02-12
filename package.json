@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "server": "nodemon ./src/server/server.ts",
+    "server": "tsc ./src/server/server.ts",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
