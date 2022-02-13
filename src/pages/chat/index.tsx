@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { Message } from '../../components/Message'
 
-import io from 'socket.io-client'
+//import io from 'socket.io-client'
 
 import { Container, MessageArea, InputMessage, SendMessage } from './style'
 
@@ -20,22 +20,22 @@ export const Chat: React.FC = () => {
 
     }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const socket = io('http://localhost:3001')
-        socket.on('connection', socket => {
+    //     const socket = io('http://localhost:3001')
+    //     socket.on('connection', socket => {
             
-            console.log('Connectou', socket.id)
-            socket.on('msg', (data: string) => {
+    //         console.log('Connectou', socket.id)
+    //         socket.on('msg', (data: string) => {
 
-                console.log(data)
-                socket.emit('msg', 'mandando do Front')
+    //             console.log(data)
+    //             socket.emit('msg', 'mandando do Front')
 
-            }) 
+    //         }) 
             
-        })
+    //     })
         
-    }, [message])
+    // }, [message])
 
     return (
 

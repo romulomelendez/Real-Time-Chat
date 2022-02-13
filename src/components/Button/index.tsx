@@ -1,7 +1,14 @@
+import { ButtonHTMLAttributes } from 'react'
 import { Btn } from './style'
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
-export const Button: React.FC = () => (
+    name: string
 
-    <Btn type="submit">GO</Btn>
+}
+
+
+export const Button: React.FC<ButtonProps> = ({ name }) => (
+
+    <Btn type="submit">{ name }</Btn>
     
 )

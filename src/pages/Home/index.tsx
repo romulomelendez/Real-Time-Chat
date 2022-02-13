@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
 
                 <Select />
                 <UserName />
-                <Button />
+                <Button name="GO" />
 
             </form>
         
