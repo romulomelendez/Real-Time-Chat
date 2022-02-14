@@ -2,21 +2,24 @@ import React, { useState } from 'react'
 
 import { Message } from '../../components/Message'
 
+import { SendMessage } from '../../components/SendMessage'
+
 //import io from 'socket.io-client'
 
-import { Container, MessageArea, InputMessage, SendMessage } from './style'
+import { Container, MessageArea, InputMessage } from './style'
 
 export const Chat: React.FC = () => {
 
-    const [ message, setMessage ] = useState<string>('')
+    const [ message, setMessage ] = useState<string[]>([])
 
     const handleMessage = () => {
 
-        if ( message.trim() ) {
+        if ( message.length === 0 ) {
 
+            console.log('Não tem mensagem!')
+
+        } else
             console.log(message)
-
-        }
 
     }
 
@@ -43,20 +46,24 @@ export const Chat: React.FC = () => {
 
             <MessageArea>
 
-                { message &&
+                {
+                    message &&
 
                     <Message />
 
                 }
 
+                <div>
+
+                    <InputMessage
+                        onChange={ (e: React.ChangeEvent<HTMLInputElement>) => setMessage([e.target.value]) }
+                        value={ message }
+                    />
+                    <SendMessage name="SEND" onClick={ handleMessage } />
+
+                </div>
+               
             </MessageArea>
-
-            <div>
-
-                <InputMessage onChange={ (e: React.ChangeEvent<HTMLInputElement>) => setMessage(e.target.value) } />
-                <SendMessage type="button" onClick={ handleMessage } />
-
-            </div>
 
         </Container>
 

@@ -13,12 +13,5 @@ export const Btn = styled.button `
     color: grey;
     background-color: #EFEFEF;
     transition-duration: 0.2s;
-
-    : hover {
-
-        color: white;
-        background-color: #c6c2c2;
-
-    }
-
-` 
+    
+`

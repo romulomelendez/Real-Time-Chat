@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { Select } from '../../components/Select'
 import { UserName } from '../../components/UserName'
-import { Button } from '../../components/Button'
+import { SendMessage } from '../../components/SendMessage'
 
 import { Container } from './style'
 
 export const Home: React.FC = () => {
-
-    
 
     const handleUserName = () => {
 
@@ -27,7 +25,7 @@ export const Home: React.FC = () => {
 
                 <Select />
                 <UserName />
-                <Button name="GO" onClick={ handleUserName } />
+                <SendMessage name="GO" onClick={ handleUserName } />
 
             </form>
         
