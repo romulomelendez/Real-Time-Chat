@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Input } from './style'
 
-export const UserName: React.FC  = () => (
+export const UserName: React.FC  = () => {
 
-    <Input type="text" placeholder="Type your Username" />
+    
 
-)
+    return (
+
+        <Input type="text" placeholder="Type your Username" onChange={ (e: React.ChangeEvent<HTMLInputElement>) => setUserName(e.target.value) } value={userName} />
+
+    )
+
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Select } from '../../components/Select'
 import { UserName } from '../../components/UserName'
@@ -8,6 +8,17 @@ import { Container } from './style'
 
 export const Home: React.FC = () => {
 
+    
+
+    const handleUserName = () => {
+
+        // if ( userName.trim() )
+        //     console.log('username existe!')
+        // else
+        //     console.log('Username não existe!')
+
+    }
+
     return (
 
         <Container>
@@ -16,7 +27,7 @@ export const Home: React.FC = () => {
 
                 <Select />
                 <UserName />
-                <Button name="GO" />
+                <Button name="GO" onClick={ handleUserName } />
 
             </form>
         
