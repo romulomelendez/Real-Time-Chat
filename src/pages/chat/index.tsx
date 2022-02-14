@@ -51,8 +51,12 @@ export const Chat: React.FC = () => {
 
             </MessageArea>
 
-            <InputMessage onChange={ (e: React.ChangeEvent<HTMLInputElement>) => setMessage(e.target.value) } />
-            <SendMessage type="button" onClick={ handleMessage } />
+            <div>
+
+                <InputMessage onChange={ (e: React.ChangeEvent<HTMLInputElement>) => setMessage(e.target.value) } />
+                <SendMessage type="button" onClick={ handleMessage } />
+
+            </div>
 
         </Container>
 
