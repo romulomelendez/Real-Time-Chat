@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+
+import UserContext from '../../context/UserContext'
 
 import { Input } from './style'
 
 export const UserName: React.FC  = () => {
 
-    
+    const { userName, setUserName } = useContext(UserContext)
 
     return (
 
